@@ -1,0 +1,11 @@
+timestamp,type,module,mode,source,action,collection,command
+2025-04-28 18:52:22.313398,,temperature_module,manual,client_remote,ventilation_off,commands,Éteindre la ventilation par commande client (mode manuel).
+2025-04-28 18:52:21.428903,,temperature_module,manual,client_remote,ventilation_on,commands,Allumer la ventilation par commande client (mode manuel).
+2025-04-28 18:52:13.357777,,temperature_module,manual,client_remote,heater_off,commands,Éteindre le chauffage par commande client (mode manuel).
+2025-04-28 18:52:12.372367,,temperature_module,manual,client_remote,heater_on,commands,Allumer le chauffage par commande client (mode manuel).
+2025-04-28 18:52:11.430743,,light_module,manual,client_remote,close_light,commands,Éteindre la lumière par commande client (mode manuel).
+2025-04-28 18:52:10.303066,,light_module,manual,client_remote,open_light,commands,Allumer la lumière par commande client (mode manuel).
+2025-04-28 18:52:09.120825,,door_module,manual,client_remote,close_door,commands,Porte fermée par commande client (mode manuel).
+2025-04-28 18:52:07.801372,,door_module,manual,client_remote,open_door,commands,Porte ouverte par commande client (mode manuel).
+2025-04-28 18:52:05.818095,,,manual,client_remote,mode_change,commands,Mode changé vers 'manual'
+2025-04-28 18:51:58.674805,,alarm_module,security,client_remote,buzzer_off & alarm_light off,commands,Commande reçue par commande client pour désactiver le buzzer et l'alerte.

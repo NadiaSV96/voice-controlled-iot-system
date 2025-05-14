@@ -1,0 +1,62 @@
+mqtt:
+  broker: "test.mosquitto.org"
+  port: 1883
+  topics:
+
+# Commandes reçues du noeud central   
+    modules_commands:
+      open_door: "cmd/porte1/open"
+      close_door: "cmd/porte1/close"
+      open_light: "cmd/light1/on"
+      close_light: "cmd/light1/off"
+      heater_on: "cmd/heater/on"
+      heater_off: "cmd/heater/off"                 
+      ventilation_on: "cmd/ventilation/on"
+      ventilation_off: "cmd/ventilation/off"
+      buzzer_on: "cmd/buzzer/on"
+      buzzer_off: "cmd/buzzer/off"
+      alarm_light : 'cmd/alarmlight/on'
+
+#Module pour gérer la partie capteur  
+    modules_capteurs:
+      switch_porte_ouverte: 'sensor/porte1/open'
+      switch_porte_fermer: 'sensor/porte1/close'
+      switch_eclairage_ouverte: 'sensor/light1/on'
+      switch_eclairage_fermer: 'sensor/light1/off'
+      bouton_chauffage: 'sensor/temp/status = high'
+      bouton_chauffage_fermer: 'sensor/heater/close'
+      bouton_ventilation : 'sensor/temp/status = low'
+      bouton_ventilation_fermer: 'sensor/ventilation/close'
+      pir_sensor: 'sensor/pir/mouvement'
+
+#Module pour gérer les statuts
+    modules_status:
+      door: "sensor/porte1/status"
+      lighting : "sensor/light1/status"
+      heater : "sensor/heater/status"
+      ventilation : "sensor/ventilation/status"
+      buzzer : "sensor/buzzer/status"
+      alarm_light: "sensor/lightAlarm/status"
+
+GPIO:
+#GPIO PORTE
+  led_pin_bi_rouge: 14
+  led_pin_bi_verte: 15 
+  switch_porte: 24
+
+  #GPIO LUMIÈRE
+  led_pin_jaune: 10
+  switch_lumiere: 11 
+  #pyr_sensor même que porte
+
+  #GPIO TEMPÉRATURE
+  bouton_chauffage: 26 #rouge
+  bouton_ventilation: 13 #bleu
+  led_pin_bleu: 22
+  led_pin_rouge: 23
+
+  #Alarme
+  buzzer_pin: 18
+
+  #Pir_sensor
+  pir_sensor: 21

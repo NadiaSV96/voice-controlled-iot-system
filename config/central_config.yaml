@@ -1,0 +1,76 @@
+mqtt:
+  broker: "test.mosquitto.org"
+  port: 1883
+  topics:
+    mode_set: "cmd/mode/set"            #Commande de changement de mode
+    mode_status: "sensor/mode/status"   #Statut du mode actuel
+    log_event : "log/event"
+    alert : "alert/security"
+
+
+    # Commandes envoyées aux modules intelligents    
+    modules_commands:
+      open_door: "cmd/porte1/open"
+      close_door: "cmd/porte1/close"
+      open_light: "cmd/light1/on"
+      close_light: "cmd/light1/off"
+      heater_on: "cmd/heater/on"
+      heater_off: "cmd/heater/off"                 
+      ventilation_on: "cmd/ventilation/on"
+      ventilation_off: "cmd/ventilation/off"
+      buzzer_on: "cmd/buzzer/on"
+      buzzer_off: "cmd/buzzer/off"
+      alarm_light : 'cmd/alarmlight/on'
+    
+    # Messages reçus de la part de la maison intelligente (changement dans les capteurs)
+    modules_capteurs:
+      switch_porte_ouverte: 'sensor/porte1/open'
+      switch_porte_fermer: 'sensor/porte1/close'
+      switch_eclairage_ouverte: 'sensor/light1/on'
+      switch_eclairage_fermer: 'sensor/light1/off'
+      bouton_chauffage : 'sensor/temp/status = high'
+      bouton_chauffage_fermer: 'sensor/heater/close'
+      bouton_ventilation_fermer: 'sensor/ventilation/close'
+      bouton_ventilation : 'sensor/temp/status = low'
+      pir_sensor: 'sensor/pir/mouvement'
+
+# Commandes reçues du client distant
+    client_commands:
+      client_open_door: "client/cmd/porte1/open"
+      client_close_door: "client/cmd/porte1/close"
+      client_open_light: "client/cmd/light1/on"
+      client_close_light: "client/cmd/light1/off"
+      client_heater_on: "client/cmd/heater/on"
+      client_heater_off: "client/cmd/heater/off"
+      client_ventilation_on: "client/cmd/ventilation/on"
+      client_ventilation_off: "client/cmd/ventilation/off"
+      client_buzzer_on: "client/cmd/buzzer/on"
+      client_buzzer_off: "client/cmd/buzzer/off"
+      alarm_stop: "client/cmd/alarm/off"
+      database_export: "central/export_db"
+
+
+# Messages du statut des modules
+    modules_status: 
+      door: "sensor/porte1/status"
+      lighting : "sensor/light1/status"
+      heater : "sensor/heater/status"
+      ventilation : "sensor/ventilation/status"
+      buzzer : "sensor/buzzer/status"
+      alarm_light: "sensor/lightAlarm/status"
+
+      
+mongodb:
+  uri: "mongodb://XXX.XXX.XXX.XXX:27017"    #your ip address where mongodb is installed or localhost
+  database: "iot_system"
+  collections:
+    events: "events"
+    alerts: "alerts"
+    commands: "commands"
+  export_limit: 10
+
+smtp:
+  sender: 'your_sender_email@gmail.com'
+  recipient: 'your_recipient_email@gmail.com'
+  app_password: 'your_app_password'
+

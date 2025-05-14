@@ -1,0 +1,31 @@
+mqtt:
+  broker: "test.mosquitto.org" 
+  port: 1883
+  topics:
+    client_change_mode: "cmd/mode/set"
+    client_status: "sensor/mode/status"
+    log_event : "log/event"
+    alert : "alert/security"
+    database_export: "central/export_db"
+
+    open_door: "client/cmd/porte1/open"
+    close_door: "client/cmd/porte1/close"
+    open_light: "client/cmd/light1/on"
+    close_light: "client/cmd/light1/off"
+    heater_on: "client/cmd/heater/on"
+    heater_off: "client/cmd/heater/off"                 
+    ventilation_on: "client/cmd/ventilation/on"
+    ventilation_off: "client/cmd/ventilation/off"
+    buzzer_on: "client/cmd/buzzer/on"
+    buzzer_off: "client/cmd/buzzer/off"
+    alarm_stop: "client/cmd/alarm/off"
+    
+    modules_status:
+      door: "sensor/porte1/status"
+      lighting : "sensor/light1/status"
+      heater : "sensor/heater/status"
+      ventilation : "sensor/ventilation/status"
+      buzzer : "sensor/buzzer/status"
+      alarm_light: "sensor/lightAlarm/status"
+      bouton_chauffage: 'sensor/temp/status = high'
+      bouton_ventilation : 'sensor/temp/status = low'
