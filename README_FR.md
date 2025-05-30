@@ -147,4 +147,4 @@ pip install paho-mqtt gpiozero RPi.GPIO gTTS vosk PyAudio pygame pymongo PyYAML 
 Projet réalisé par :
 - **Nadia Simard Villa** – AEC Internet des Objets et IA  
 - **Sophie Mercier** – AEC Internet des Objets et IA  
-- Sous la supervision de **Khalil Loghlam**, enseignant, *ing.* en génie électrique et logiciel
+Sous la supervision de **Khalil Loghlam**, enseignant, *ing.* en génie électrique et logiciel
