@@ -147,4 +147,4 @@ pip install paho-mqtt gpiozero RPi.GPIO gTTS vosk PyAudio pygame pymongo PyYAML 
 Project created by:
 - **Nadia Simard Villa** – AEC in IoT & AI  
 - **Sophie Mercier** – AEC in IoT & AI  
-- Under the supervision of **Khalil Loghlam**, teacher, *Eng.* in Electrical and Software Engineering
+Under the supervision of **Khalil Loghlam**, teacher, *Eng.* in Electrical and Software Engineering
